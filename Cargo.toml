@@ -1,0 +1,20 @@
+[package]
+name = "rgb565previewer"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+slint = "1.6.0"
+image = "0.25.1"
+anyhow = "1"
+rfd = "0.14.1"
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[build-dependencies]
+winres = "0.1.12"
